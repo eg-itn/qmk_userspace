@@ -94,18 +94,18 @@ enum custom_keycodes {
  * ┌------+------+------+------+------+------+------+------+------+------+------+------+
  * │  F12 │  F1  │  F2  │  F3  │  F4  │  F5  │  F6  │  F7  │  F8  │  F9  │  F10 │  F11 │
  * +------+------+------+------+------+------+------+------+------+------+------+------+
- * │      │      │      │  Up  │      │ TGTP │      │      │  Up  │      │      │      │
+ * │      │      │      │  Up  │      │ TGTP │      │      │  Up  │ [    │ ]    │      │
  * +------+------+------+------+------+------+------+------+------+------+------+------+
  * │      │ TURBO│ Left │ Down │ Right│      │      │ Left │ Down │ Right│      │      │
  * +------+------+------+------+------+------+------+------+------+------+------+------+
- * │      │ APP  │ Del │ SHRX │ BNDC │      │      │      │      │      │ APP  │      │
+ * │      │ APP  │ Del  │ SHRX │ BNDC │      │      │      │      │      │ APP  │      │
  * +------+------+------+------+------+------+------+------+------+------+------+------+
  * │      │      │      │      │      │      │      │      │      │      │      │      │
  * +------+------+------+------+------+------+------+------+------+------+------+------+
  */
 [_LAYER3] = LAYOUT_ortho_5x12(
     KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, TGTP, KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, TGTP, KC_TRNS, KC_TRNS, KC_UP, KC_LBRC, KC_RBRC, KC_TRNS,
     KC_TRNS, TURBO, KC_LEFT, KC_DOWN, KC_RGHT, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_TRNS, KC_TRNS,
     KC_TRNS, SMENU, KC_DEL, SHRX, BNDC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, SMENU, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
