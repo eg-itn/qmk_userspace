@@ -98,7 +98,7 @@ enum custom_keycodes {
  * +------+------+------+------+------+------+------+------+------+------+------+------+
  * │      │ TURBO│ Left │ Down │ Right│      │      │ Left │ Down │ Right│      │      │
  * +------+------+------+------+------+------+------+------+------+------+------+------+
- * │      │ APP  │      │ SHRX │ BNDC │      │      │      │      │      │ APP  │      │
+ * │      │ APP  │ Del │ SHRX │ BNDC │      │      │      │      │      │ APP  │      │
  * +------+------+------+------+------+------+------+------+------+------+------+------+
  * │      │      │      │      │      │      │      │      │      │      │      │      │
  * +------+------+------+------+------+------+------+------+------+------+------+------+
@@ -107,7 +107,7 @@ enum custom_keycodes {
     KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, TGTP, KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, TURBO, KC_LEFT, KC_DOWN, KC_RGHT, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_TRNS, KC_TRNS,
-    KC_TRNS, SMENU, KC_TRNS, SHRX, BNDC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, SMENU, KC_TRNS,
+    KC_TRNS, SMENU, KC_DEL, SHRX, BNDC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, SMENU, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 
