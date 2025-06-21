@@ -9,6 +9,7 @@
 *.hex
 *.bin
 *.uf2
+Firmware*.zip
 
 # clangd
 compile_commands.json
