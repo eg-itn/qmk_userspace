@@ -34,9 +34,9 @@
 #error "mouse_turbo_click: Please set `DEFERRED_EXEC_ENABLE = yes` in rules.mk."
 #else
 
-// The keycode to be repeatedly clicked, `KC_MS_BTN1` mouse button 1 by default.
+// The keycode to be repeatedly clicked, `MS_BTN1` mouse button 1 by default.
 #ifndef MOUSE_TURBO_CLICK_KEY
-#define MOUSE_TURBO_CLICK_KEY KC_MS_BTN1
+#define MOUSE_TURBO_CLICK_KEY MS_BTN1
 #endif  // MOUSE_TURBO_CLICK_KEY
 
 // The click period in milliseconds. For instance a period of 200 ms would be 5

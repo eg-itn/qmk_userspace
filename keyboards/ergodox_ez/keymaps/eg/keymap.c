@@ -86,9 +86,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC, KC_BSLS, KC_ENT,                    KC_TRNS, KC_INS,  KC_HOME, KC_PGUP, KC_TRNS, KC_TRNS,
     KC_TRNS, CTRLZ,   CTRLX,   CTRLC,   CTRLV,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DEL,  KC_END,  KC_PGDN, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                                        RGB_MOD, KC_TRNS,                   RGB_TOG, RGB_M_P,
+                                        KC_TRNS, KC_TRNS,                   RM_TOGG, RGB_M_P,
                                                  KC_TRNS,                   KC_TRNS,
-                               RGB_VAD, RGB_VAI, KC_TRNS,                   KC_TRNS, RGB_HUD, RGB_HUI
+                               RM_VALD, RM_VALU, KC_TRNS,                   KC_TRNS, RM_HUED, RM_HUEU
 ),
 /* LAYER2
  *
@@ -113,14 +113,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LAYER2] = LAYOUT_ergodox_pretty(
   // left hand
-    KC_TRNS, KC_BTN1, KC_BTN3, KC_BTN2, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NUM,  KC_PSLS, KC_PAST, KC_PMNS, KC_PPLS,
-    KC_ESC,  KC_WH_L, KC_MS_U, KC_WH_R, KC_WH_U, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_P7,   KC_P8,   KC_P9,   KC_PPLS, KC_CAPS,
-    KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, KC_TRNS,                   KC_TRNS, KC_P4,   KC_P5,   KC_P6,   KC_PPLS, KC_TRNS,
+    KC_TRNS, MS_BTN1, MS_BTN3, MS_BTN2, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NUM,  KC_PSLS, KC_PAST, KC_PMNS, KC_PPLS,
+    KC_ESC,  MS_WHLL, MS_UP,   MS_WHLR, MS_WHLU, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_P7,   KC_P8,   KC_P9,   KC_PPLS, KC_CAPS,
+    KC_TRNS, MS_LEFT, MS_DOWN, MS_RGHT, MS_WHLD, KC_TRNS,                   KC_TRNS, KC_P4,   KC_P5,   KC_P6,   KC_PPLS, KC_TRNS,
     KC_ENT,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_P1,   KC_P2,   KC_P3,   KC_PEQL, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_ACL0, KC_ACL0, KC_TRNS,                                     KC_P0,   KC_P0,   KC_PDOT, KC_PENT, KC_TRNS,
+    KC_TRNS, KC_TRNS, MS_ACL0, MS_ACL0, KC_TRNS,                                     KC_P0,   KC_P0,   KC_PDOT, KC_PENT, KC_TRNS,
                                         KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS,
                                                  KC_TRNS,                   KC_TRNS,
-                               KC_ACL2, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS, KC_WBAK
+                               MS_ACL2, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS, KC_WBAK
 ),
 /* LAYER3
  *
@@ -176,7 +176,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 `--------------------'       `--------------------'
  */
 [_LAYER4] = LAYOUT_ergodox_pretty(
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RGB_TOG, KC_BRID, KC_BRIU,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RM_TOGG, KC_BRID, KC_BRIU,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MUTE, KC_VOLD, KC_VOLU,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS, KC_TRNS, KC_MPRV, KC_MPLY, KC_MNXT,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
