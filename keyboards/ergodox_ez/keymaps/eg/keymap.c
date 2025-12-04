@@ -23,6 +23,9 @@ enum custom_keycodes {
     BNDC, // Bandicam capture shortcut(Ctrl+Shift+Alt+S)
     TURBO,  // Mouse Click Turbo
     TGTP,  // Toggle Always on Top(Ctrl+Win+T)
+    KANA,
+    ROMA,
+    HNGL,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -65,9 +68,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
  * |        |      |  (   |  )   |  -   |   =  |      |           |      |      │PrtScn│ ScrLk│ Paus │      │        │
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      │  [   │  ]   │  \   │Enter |------|           |------|      │  Ins │ Home │ PgUp │      |        |
+ * |        |      │  [   │  ]   │  \   │Enter |------|           |------|      │  Ins │ Home │ PgUp │ KANA | HNGL   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        │ CTRLZ│ CTRLX│ CTRLC│ CTRLV│      |      |           |      |      │  Del │  End │ PgDn │      │        |
+ * |        │ CTRLZ│ CTRLX│ CTRLC│ CTRLV│      |      |           |      |      │  Del │  End │ PgDn │ ROMA │        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -83,8 +86,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // left hand
     KC_F12,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_TRNS, KC_TRNS, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
     KC_TRNS, KC_TRNS, KC_LPRN, KC_RPRN, KC_MINS, KC_EQL,  KC_TRNS, KC_TRNS, KC_TRNS, KC_PSCR, KC_SCRL, KC_PAUS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC, KC_BSLS, KC_ENT,                    KC_TRNS, KC_INS,  KC_HOME, KC_PGUP, KC_TRNS, KC_TRNS,
-    KC_TRNS, CTRLZ,   CTRLX,   CTRLC,   CTRLV,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DEL,  KC_END,  KC_PGDN, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC, KC_BSLS, KC_ENT,                    KC_TRNS, KC_INS,  KC_HOME, KC_PGUP, KANA,    HNGL,
+    KC_TRNS, CTRLZ,   CTRLX,   CTRLC,   CTRLV,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DEL,  KC_END,  KC_PGDN, ROMA,    KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                         KC_TRNS, KC_TRNS,                   RM_TOGG, RGB_M_P,
                                                  KC_TRNS,                   KC_TRNS,
@@ -270,7 +273,48 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
 
-  }
+    case KANA:
+    // If key is being pressed, set to Kana
+        if (record->event.pressed) {
+            register_code(KC_LCTL);
+            register_code(KC_LSFT);
+            tap_code_delay(KC_1, 100);
+            unregister_code(KC_LSFT);
+            unregister_code(KC_LCTL);
+            tap_code(KC_LNG1);
+        }
+        break;
+
+    case ROMA:
+    // If key is being pressed, send to Romaji
+        if (record->event.pressed) {
+            register_code(KC_LCTL);
+            register_code(KC_LSFT);
+            tap_code_delay(KC_1, 100);
+            unregister_code(KC_LSFT);
+            unregister_code(KC_LCTL);
+            tap_code(KC_LNG2);
+        }
+        break;
+
+    case HNGL:
+    // If key is being pressed, set to Hangul
+        if (record->event.pressed) {
+            register_code(KC_LCTL);
+            register_code(KC_LSFT);
+            tap_code_delay(KC_1, 100);
+            unregister_code(KC_LSFT);
+            unregister_code(KC_LCTL);
+            tap_code(KC_LNG1);
+            register_code(KC_LCTL);
+            register_code(KC_LSFT);
+            tap_code_delay(KC_2, 100);
+            unregister_code(KC_LSFT);
+            unregister_code(KC_LCTL);
+        }
+        break;
+
+}
 
   // MOUSE TURBO
   if (!process_mouse_turbo_click(keycode, record, TURBO)) {
