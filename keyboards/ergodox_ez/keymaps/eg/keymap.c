@@ -278,7 +278,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (record->event.pressed) {
             register_code(KC_LCTL);
             register_code(KC_LSFT);
-            tap_code_delay(KC_1, 100);
+            tap_code_delay(KC_1, 50);
             unregister_code(KC_LSFT);
             unregister_code(KC_LCTL);
             tap_code(KC_LNG1);
@@ -290,7 +290,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (record->event.pressed) {
             register_code(KC_LCTL);
             register_code(KC_LSFT);
-            tap_code_delay(KC_1, 100);
+            tap_code_delay(KC_1, 50);
             unregister_code(KC_LSFT);
             unregister_code(KC_LCTL);
             tap_code(KC_LNG2);
@@ -302,13 +302,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (record->event.pressed) {
             register_code(KC_LCTL);
             register_code(KC_LSFT);
-            tap_code_delay(KC_1, 100);
+            tap_code_delay(KC_1, 50);
             unregister_code(KC_LSFT);
             unregister_code(KC_LCTL);
             tap_code(KC_LNG1);
             register_code(KC_LCTL);
             register_code(KC_LSFT);
-            tap_code_delay(KC_2, 100);
+            tap_code_delay(KC_2, 50);
             unregister_code(KC_LSFT);
             unregister_code(KC_LCTL);
         }
