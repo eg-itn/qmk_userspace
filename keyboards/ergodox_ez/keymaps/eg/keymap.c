@@ -305,7 +305,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             tap_code_delay(KC_1, 50);
             unregister_code(KC_LSFT);
             unregister_code(KC_LCTL);
-            tap_code(KC_LNG1);
+            tap_code_delay(KC_LNG1, 10);
             register_code(KC_LCTL);
             register_code(KC_LSFT);
             tap_code_delay(KC_2, 50);
